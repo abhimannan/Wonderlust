@@ -44,6 +44,7 @@
 <% layout("./layout/boilerplate.ejs") -%>
 
 <!-- 🧭 Filter Toggle Button -->
+ <a class="nav-link" href="/listings/new">Add New Listing</a>
 <div class="container mt-3 me-1 text-end filter-btn">
   <button class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
     <i class="fa-solid fa-sliders"></i> Filters
@@ -53,7 +54,7 @@
 <!-- 🎛️ Offcanvas Filter Panel -->
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filter Categories</h5>
+    <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filter Places</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
 

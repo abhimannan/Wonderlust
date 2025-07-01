@@ -1,32 +1,34 @@
 <link rel="stylesheet" href="/css/style.css">
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top" id="mainNavbar">
-  <div class="container-fluid">
+  <div class="container-fluid align-items-center">
+    <!-- Brand -->
     <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass fs-4"></i></a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    <!-- Always-visible search bar -->
+    <form class="d-flex me-auto ms-2 flex-grow-1" role="search" style="max-width: 500px;">
+      <input class="form-control search-input me-2" type="search" placeholder="Search Destination" aria-label="Search"/>
+      <button class="btn search-btn" type="submit">
+        <i class="fa-solid fa-magnifying-glass me-1"></i>Search
+      </button>
+    </form>
+
+    <!-- Toggler for small screens -->
+    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse show-on-expand" id="navbarNavAltMarkup">
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <!-- Left nav -->
-      <div class="navbar-nav me-auto">
+      <div class="navbar-nav me-auto mt-2 mt-md-0">
         <a class="nav-link" href="/listings">Explore</a>
       </div>
 
-      <!-- Search -->
-      <form class="d-flex mx-auto mt-2 mt-md-0" role="search">
-        <input class="form-control search-input me-2" type="search" placeholder="Search Destination" aria-label="Search"/>
-        <button class="btn search-btn" type="submit">
-          <i class="fa-solid fa-magnifying-glass me-1"></i>Search
-        </button>
-      </form>
-
       <!-- Right nav -->
       <div class="navbar-nav ms-auto text-center text-md-start">
-        
         <% if(!currUser) { %>
           <a class="nav-link" href="/signup"><b>Sign up</b></a>
           <a class="nav-link" href="/login"><b>Log in</b></a>

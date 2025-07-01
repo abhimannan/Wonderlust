@@ -110,7 +110,7 @@ body {
 
     /* footer */
     footer {
-  font-size: 1.5rem;        
+  font-size: 1.1rem;        
   color: #444;
   padding: 1rem 0;          
   background-color: #f8f9fa;  
@@ -119,7 +119,7 @@ body {
 footer a {
   text-decoration: none;
   color: inherit;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
 }
 
 footer a:hover {
@@ -127,7 +127,7 @@ footer a:hover {
 }
 
 .f-info-socials i {
-  font-size: 2rem;         /* Increased icon size */
+  font-size: 1.5rem;         /* Increased icon size */
   transition: color 0.3s;
 }
 

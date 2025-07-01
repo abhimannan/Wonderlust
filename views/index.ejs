@@ -23,21 +23,15 @@
   margin-top: 0.2rem;
 }
 
-.tax-info {
-  display: none;
-}
-
 .tax-toggle {
-  border: 1px solid hsl(0, 80%, 2%);
+  border: 1px solid hsl(0, 2%, 9%);
   border-radius: 2rem;
   padding: 0.75rem 1.5rem;
-  background-color: #f40e89;
+  background-color: #f8f9fa;
   display: flex;
   justify-content: center;
-  height: 2.25rem;
-  align-items: center;
-  margin-left : 2rem;
 }
+
 
         
 
@@ -45,67 +39,57 @@
 
 <% layout("./layout/boilerplate.ejs") -%>
 
-<!-- Filter Buttons -->
-<div id="filters" class="container mt-3">
-  <div class="row gy-3 gx-2 justify-content-center">
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-fire fs-4"></i>
-      <p>Trending</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-house fs-4"></i>
-      <p>Rooms</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-city fs-4"></i>
-      <p>Iconic cities</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-chess-rook fs-4"></i>
-      <p>Castles</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-person-swimming fs-4"></i>
-      <p>Amazing Pools</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-campground fs-4"></i>
-      <p>Camping</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-snowflake fs-4"></i>
-      <p>Arctic</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-wheat-awn fs-4"></i>
-      <p>Farms</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-igloo fs-4"></i>
-      <p>Domes</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-solid fa-ship fs-4"></i>
-      <p>Boats</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-brands fa-digital-ocean fs-4"></i>
-      <p>Islands</p>
-    </div>
-    <div class="col-auto filter text-center">
-      <i class="fa-brands fa-red-river fs-4"></i>
-      <p>River Near</p>
-    </div>
-    
-    <!-- Tax Toggle Switch -->
-    <div class="col-12 col-md-auto tax-toggle mt-3 text-center">
-      <div class="form-check form-switch form-check-reverse mx-auto">
-        <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-        <label class="form-check-label" for="switchCheckDefault">Display after total taxes</label>
+<!-- 🧭 Filter Toggle Button -->
+<div class="container mt-3">
+  <button class="btn btn-outline-dark d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
+    <i class="fa-solid fa-sliders"></i> Filters
+  </button>
+</div>
+
+<!-- 🎛️ Offcanvas Filter Panel -->
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filter Categories</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <div class="container">
+      <div class="row gy-3 gx-2 justify-content-center" id="filters">
+        <% const filters = [
+          { icon: 'fa-fire', label: 'Trending' },
+          { icon: 'fa-house', label: 'Rooms' },
+          { icon: 'fa-city', label: 'Iconic cities' },
+          { icon: 'fa-chess-rook', label: 'Castles' },
+          { icon: 'fa-person-swimming', label: 'Amazing Pools' },
+          { icon: 'fa-campground', label: 'Camping' },
+          { icon: 'fa-snowflake', label: 'Arctic' },
+          { icon: 'fa-wheat-awn', label: 'Farms' },
+          { icon: 'fa-igloo', label: 'Domes' },
+          { icon: 'fa-ship', label: 'Boats' },
+          { icon: 'fa-brands fa-digital-ocean', label: 'Islands' },
+          { icon: 'fa-brands fa-red-river', label: 'River Near' }
+        ]; %>
+
+        <% for (let filter of filters) { %>
+          <div class="col-auto filter text-center">
+            <i class="fa-solid <%= filter.icon %> fs-4"></i>
+            <p><%= filter.label %></p>
+          </div>
+        <% } %>
+
+        <!-- Toggle -->
+        <div class="col-12 tax-toggle mt-3 text-center">
+          <div class="form-check form-switch form-check-reverse mx-auto">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+            <label class="form-check-label" for="switchCheckDefault">Display after total taxes</label>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <!-- Listings Grid -->
 <div class="container mt-4">

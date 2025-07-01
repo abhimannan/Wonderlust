@@ -44,11 +44,16 @@
 <% layout("./layout/boilerplate.ejs") -%>
 
 <!-- 🧭 Filter Toggle Button -->
- <a class="nav-link" href="/listings/new">Add New Listing</a>
-<div class="container mt-3 me-1 text-end filter-btn">
-  <button class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
-    <i class="fa-solid fa-sliders"></i> Filters
-  </button>
+<div class="container mt-3 d-flex justify-content-between align-items-center">
+  <div>
+    <a class="btn btn-success" href="/listings/new">Add New Listing</a>
+  </div>
+
+  <div class="filter-btn">
+    <button class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
+      <i class="fa-solid fa-sliders"></i> Filters
+    </button>
+  </div>
 </div>
 
 <!-- 🎛️ Offcanvas Filter Panel -->

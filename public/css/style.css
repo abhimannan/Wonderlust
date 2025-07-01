@@ -107,3 +107,27 @@ body {
       border-radius: 25px;
       padding: 0.5rem 1rem 0.5rem 3rem;
     }
+
+    /* footer */
+    footer {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.f-info-socials i:hover {
+  color: #f40e89;
+}

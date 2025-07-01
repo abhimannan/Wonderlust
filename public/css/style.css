@@ -69,46 +69,23 @@ body {
     height : 400px;
     width : 80vh;
  }
+
  /* navbar style */
- .search-btn {
-  background-color: #f40e89;
-  color: white;
-  border-radius: 25px;
-  padding: 0.5rem 1rem;
-}
-
-.search-btn:hover {
-  background-color: #e30c7c;
-  color: white;
-}
-
-.search-btn i {
-  display: inline;
-  margin-right: 0.5rem;
-}
-
-.search-input {
-  border-radius: 25px;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  min-width: 180px;
-}
-
+ /* Responsive behavior for collapsed navbar */
 @media (max-width: 768px) {
-  .navbar .navbar-nav {
-    text-align: center;
+  .navbar-collapse {
+    position: relative;
+    background-color: #ffffff;
+    z-index: 1000;
+    padding: 1rem 0;
   }
 
-  .search-input {
-    width: 100%;
-    margin-bottom: 0.5rem;
+  .show-on-expand.collapse:not(.show) {
+    display: none !important;
   }
 
-  .search-btn {
-    width: 100%;
-  }
-
-  form[role="search"] {
-    flex-direction: column;
-    align-items: stretch;
+  body.navbar-expanded {
+    margin-top: 300px; /* push page content down when navbar is expanded */
+    transition: margin-top 0.3s ease;
   }
 }

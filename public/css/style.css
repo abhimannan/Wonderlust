@@ -66,8 +66,9 @@ body {
 
 /* map */
 #map { 
-    height : 400px;
-    width : 80vh;
+   width: 100%;
+  min-height: 300px;
+  border: 2px solid #ccc;
  }
 
  /* navbar style */

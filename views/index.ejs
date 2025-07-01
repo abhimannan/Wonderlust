@@ -27,11 +27,15 @@
   border: 1px solid hsl(0, 2%, 9%);
   border-radius: 2rem;
   padding: 0.75rem 1.5rem;
-  background-color: #f8f9fa;
+  background-color: #f40e89;
   display: flex;
   justify-content: center;
 }
-
+.filter-btn {
+    margin-right : 1rem;
+    background-color: #f40e89;
+    color: white;
+}
 
         
 
@@ -40,7 +44,7 @@
 <% layout("./layout/boilerplate.ejs") -%>
 
 <!-- 🧭 Filter Toggle Button -->
-<div class="container mt-3 me-1 text-end">
+<div class="container mt-3 me-1 text-end filter-btn">
   <button class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
     <i class="fa-solid fa-sliders"></i> Filters
   </button>

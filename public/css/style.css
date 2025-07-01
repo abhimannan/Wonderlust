@@ -9,7 +9,7 @@ body {
 }
 .fa-compass {
     font-size : 2rem;
-    color : #13020b;
+    color : #f40e89;
 }
 .navbar {
     height :5rem;
@@ -69,3 +69,46 @@ body {
     height : 400px;
     width : 80vh;
  }
+ /* navbar style */
+ .search-btn {
+  background-color: #f40e89;
+  color: white;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+}
+
+.search-btn:hover {
+  background-color: #e30c7c;
+  color: white;
+}
+
+.search-btn i {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.search-input {
+  border-radius: 25px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  min-width: 180px;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    text-align: center;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+
+  form[role="search"] {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

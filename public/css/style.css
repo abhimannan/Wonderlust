@@ -71,7 +71,6 @@ body {
  }
 
  /* navbar style */
- /* Responsive behavior for collapsed navbar */
 @media (max-width: 768px) {
   .navbar-collapse {
     position: relative;
@@ -89,3 +88,21 @@ body {
     transition: margin-top 0.3s ease;
   }
 }
+.search-btn{
+        background-color:#f40e89; ;
+        color:white;
+        border-radius: 25px;
+        padding : 0 1rem 0 1rem;
+    }
+    .search-btn:hover {
+      background-color:#f40e89; ;
+        color:white;
+    }
+    .search-btn i {
+      display: inline;
+      margin-left : 0.5rem;
+    }
+    .search-input {
+      border-radius: 25px;
+      padding: 0.5rem 1rem 0.5rem 3rem;
+    }
